@@ -1,0 +1,38 @@
+
+myplot <- function(data , rows = 1:10  ){
+  Data <- ? data[rows,, drop = F ]
+  
+  matplot(t(Data)  ,   type="b" , pch=15:18 ,col=c(1:4,6)  )
+  
+  legend("bottomleft",legend = Players[rows] ,col=c(1:4,6) , pch=15:18  ,  horiz = F)
+
+}
+myplot( Games)
+
+
+
+#Salary
+myplot(Salary)
+myplot(Salary/Games)
+myplot(Salary/FieldGoals)
+
+#IN-Game Metrics 
+myplot(MinutesPlayed)
+myplot(Points)
+
+
+#In-Game metrics Normalized 
+myplot(FieldGoals/Games)
+myplot(FieldGoals/FieldGoalAttempts)
+myplot(FieldGoalAttempts/Games)
+myplot(Points/Games)
+
+#Intersting Observation
+myplot(MinutesPlayed/Games)
+myplot(Games)
+
+#Time is valuable 
+myplot(FieldGoals/MinutesPlayed)
+
+#player Style 
+myplot((Points - Free_Throw)/FieldGoals)
